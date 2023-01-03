@@ -1,0 +1,5 @@
+---
+collections:
+  - name: ansible.utils
+    source: https://galaxy.ansible.com/
+    version: '==2.8.0'

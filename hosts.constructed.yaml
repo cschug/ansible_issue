@@ -1,0 +1,25 @@
+---
+plugin: ansible.builtin.constructed
+strict: true
+
+groups:
+  # Hardware-related host groups
+  hg_dl360gen9:  hw_manufacturer|d('')|string in ['HPE', 'HP'] and hw_model|d('')|string in ['ProLiant DL360 Gen9']
+  hg_dl380gen9:  hw_manufacturer|d('')|string in ['HPE', 'HP'] and hw_model|d('')|string in ['ProLiant DL380 Gen9']
+  hg_dl325gen10: hw_manufacturer|d('')|string in ['HPE']       and hw_model|d('')|string in ['ProLiant DL325 Gen10']
+  hg_dl385gen10: hw_manufacturer|d('')|string in ['HPE']       and hw_model|d('')|string in ['ProLiant DL385 Gen10']
+
+  hg_kvm:        hw_virtual|d('')|string      in ['KVM']
+
+  hg_ilo4: ilo4_ip4|d() is ansible.utils.ipv4
+  hg_ilo5: ilo5_ip4|d() is ansible.utils.ipv4
+
+  # Platform-related host groups
+  hg_ber1p_ge: inventory_hostname_short.startswith('ber1p-ge-')
+  hg_ber1s_ge: inventory_hostname_short.startswith('ber1s-ge-')
+
+  # Function-related host groups
+  hg_data: inventory_hostname_short is match('^[a-z]{3}\\d+[dpst](?:-[a-z]+)+-data-\d+$')
+  hg_kxs:  inventory_hostname_short is match('^[a-z]{3}\\d+[dpst](?:-[a-z]+)+-kxs-\d+$')
+  hg_virt: inventory_hostname_short is match('^[a-z]{3}\\d+[dpst](?:-[a-z]+)+-virt-\d+$')
+  hg_lb:   inventory_hostname_short is match('^[a-z]{3}\\d+[dpst](?:-[a-z]+)+-lb(?:-[^-]+)?-\d+$')

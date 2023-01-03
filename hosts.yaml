@@ -1,0 +1,252 @@
+---
+all:
+  children:
+    sites:
+      children:
+        ber1:      # Berlin 1
+          children:
+            ber1p: # Berlin 1 Production
+              hosts:
+                ber1p-ge-data-1:
+                  ansible_host: 10.16.4.1
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL385 Gen10
+                  ilo5_ip4: 10.16.68.1
+                  rack: ber1-7-1
+                  rack_units: ['26', '27']
+                ber1p-ge-data-2:
+                  ansible_host: 10.16.4.2
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL385 Gen10
+                  ilo5_ip4: 10.16.68.2
+                  rack: ber1-7-1
+                  rack_units: ['26', '27']
+                ber1p-ge-data-3:
+                  ansible_host: 10.16.4.3
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL385 Gen10
+                  ilo5_ip4: 10.16.68.3
+                  rack: ber1-7-3
+                  rack_units: ['26', '27']
+
+                ber1p-ge-kxs-1:
+                  ansible_host: 10.16.4.4
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.4
+                  rack: ber1-7-1
+                  rack_units: ['28']
+                ber1p-ge-kxs-2:
+                  ansible_host: 10.16.4.5
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.5
+                  rack: ber1-7-1
+                  rack_units: ['28']
+                ber1p-ge-kxs-3:
+                  ansible_host: 10.16.4.6
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.6
+                  rack: ber1-7-3
+                  rack_units: ['28']
+                ber1p-ge-kxs-4:
+                  ansible_host: 10.16.4.7
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.7
+                  rack: ber1-7-1
+                  rack_units: ['29']
+                ber1p-ge-kxs-5:
+                  ansible_host: 10.16.4.8
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.8
+                  rack: ber1-7-1
+                  rack_units: ['29']
+                ber1p-ge-kxs-6:
+                  ansible_host: 10.16.4.8
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.8
+                  rack: ber1-7-3
+                  rack_units: ['29']
+                ber1p-ge-kxs-7:
+                  ansible_host: 10.16.4.9
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.9
+                  rack: ber1-7-1
+                  rack_units: ['30']
+                ber1p-ge-kxs-8:
+                  ansible_host: 10.16.4.10
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.10
+                  rack: ber1-7-1
+                  rack_units: ['30']
+                ber1p-ge-kxs-9:
+                  ansible_host: 10.16.4.11
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL325 Gen10
+                  ilo5_ip4: 10.16.68.11
+                  rack: ber1-7-3
+                  rack_units: ['30']
+
+                ber1p-ge-lb-ext-1:
+                  ansible_host: 10.16.8.11
+                  hw_virtual: KVM
+                ber1p-ge-lb-ext-2:
+                  ansible_host: 10.16.8.12
+                  hw_virtual: KVM
+
+                ber1p-ge-lb-int-1:
+                  ansible_host: 10.16.8.21
+                  hw_virtual: KVM
+                ber1p-ge-lb-int-2:
+                  ansible_host: 10.16.8.22
+                  hw_virtual: KVM
+
+                ber1p-ge-virt-1:
+                  ansible_host: 10.16.4.12
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL385 Gen10
+                  ilo5_ip4: 10.16.68.12
+                  rack: ber1-7-1
+                  rack_units: ['24', '25']
+                ber1p-ge-virt-2:
+                  ansible_host: 10.16.4.13
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL385 Gen10
+                  ilo5_ip4: 10.16.68.13
+                  rack: ber1-7-1
+                  rack_units: ['24', '25']
+                ber1p-ge-virt-3:
+                  ansible_host: 10.16.4.14
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL385 Gen10
+                  ilo5_ip4: 10.16.68.14
+                  rack: ber1-7-3
+                  rack_units: ['24', '25']
+            ber1s: # Berlin 1 Staging
+              hosts:
+                ber1s-ge-data-1:
+                  ansible_host: 10.17.4.1
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL380 Gen9
+                  ilo4_ip4: 10.17.68.1
+                  rack: ber1-6-1
+                  rack_units: ['26', '27']
+                ber1s-ge-data-2:
+                  ansible_host: 10.17.4.2
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL380 Gen9
+                  ilo4_ip4: 10.17.68.2
+                  rack: ber1-6-1
+                  rack_units: ['26', '27']
+                ber1s-ge-data-3:
+                  ansible_host: 10.17.4.3
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL380 Gen9
+                  ilo4_ip4: 10.17.68.3
+                  rack: ber1-6-3
+                  rack_units: ['26', '27']
+
+                ber1s-ge-kxs-1:
+                  ansible_host: 10.17.4.4
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.4
+                  rack: ber1-6-1
+                  rack_units: ['28']
+                ber1s-ge-kxs-2:
+                  ansible_host: 10.17.4.5
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.5
+                  rack: ber1-6-1
+                  rack_units: ['28']
+                ber1s-ge-kxs-3:
+                  ansible_host: 10.17.4.6
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.6
+                  rack: ber1-6-3
+                  rack_units: ['28']
+                ber1s-ge-kxs-4:
+                  ansible_host: 10.17.4.7
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.7
+                  rack: ber1-6-1
+                  rack_units: ['29']
+                ber1s-ge-kxs-5:
+                  ansible_host: 10.17.4.8
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.8
+                  rack: ber1-6-1
+                  rack_units: ['29']
+                ber1s-ge-kxs-6:
+                  ansible_host: 10.17.4.8
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.8
+                  rack: ber1-6-3
+                  rack_units: ['29']
+                ber1s-ge-kxs-7:
+                  ansible_host: 10.17.4.9
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.9
+                  rack: ber1-6-1
+                  rack_units: ['30']
+                ber1s-ge-kxs-8:
+                  ansible_host: 10.17.4.10
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.10
+                  rack: ber1-6-1
+                  rack_units: ['30']
+                ber1s-ge-kxs-9:
+                  ansible_host: 10.17.4.11
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL360 Gen9
+                  ilo4_ip4: 10.17.68.11
+                  rack: ber1-6-3
+                  rack_units: ['30']
+
+                ber1s-ge-lb-ext-1:
+                  ansible_host: 10.17.8.11
+                  hw_virtual: KVM
+                ber1s-ge-lb-ext-2:
+                  ansible_host: 10.17.8.12
+                  hw_virtual: KVM
+                ber1s-ge-lb-int-1:
+                  ansible_host: 10.17.8.21
+                  hw_virtual: KVM
+                ber1s-ge-lb-int-2:
+                  ansible_host: 10.17.8.22
+                  hw_virtual: KVM
+
+                ber1s-ge-virt-1:
+                  ansible_host: 10.17.4.12
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL380 Gen9
+                  ilo4_ip4: 10.17.68.12
+                  rack: ber1-6-1
+                  rack_units: ['24', '25']
+                ber1s-ge-virt-2:
+                  ansible_host: 10.17.4.13
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL380 Gen9
+                  ilo4_ip4: 10.17.68.13
+                  rack: ber1-6-1
+                  rack_units: ['24', '25']
+                ber1s-ge-virt-3:
+                  ansible_host: 10.17.4.14
+                  hw_manufacturer: HPE
+                  hw_model: ProLiant DL380 Gen9
+                  ilo4_ip4: 10.17.68.14
+                  rack: ber1-6-3
+                  rack_units: ['24', '25']
