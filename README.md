@@ -116,7 +116,7 @@ user    0m0.991s
 sys     0m0.316s
 ```
 
-### Ansible Core 2.13.4 from Fedora 37
+### Ansible Core 2.14.1 from Fedora 37
 
 ```
 $ ansible --version
